@@ -1,0 +1,11 @@
+<h2>Lista de Pedidos</h2>
+<ul>
+  <li *ngFor="let order of orders">
+    <p><strong>Cliente:</strong> {{ order.customer }}</p>
+    <p><strong>Status:</strong> {{ order.status }}</p>
+    <p><strong>Total:</strong> R$ {{ order.total }}</p>
+    <button (click)="updateStatus(order._id, 'Processado')" [disabled]="order.status === 'Processado'">
+      Processar Pedido
+    </button>
+  </li>
+</ul>

@@ -1,0 +1,15 @@
+<h2>Novo Pedido</h2>
+<form (submit)="createOrder()">
+  <label>Nome do Cliente:</label>
+  <input type="text" [(ngModel)]="customer" name="customer" required />
+
+  <button type="button" (click)="addItem()">Adicionar Item</button>
+
+  <div *ngFor="let item of items; let i = index">
+    <input type="text" [(ngModel)]="item.product" name="product{{i}}" placeholder="Produto" required />
+    <input type="number" [(ngModel)]="item.quantity" name="quantity{{i}}" placeholder="Quantidade" required />
+    <input type="number" [(ngModel)]="item.price" name="price{{i}}" placeholder="Preço" required />
+  </div>
+
+  <button type="submit">Criar Pedido</button>
+</form>
