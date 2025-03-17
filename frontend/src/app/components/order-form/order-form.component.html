@@ -1,15 +1,83 @@
 <h2>Novo Pedido</h2>
-<form (submit)="createOrder()">
-  <label>Nome do Cliente:</label>
-  <input type="text" [(ngModel)]="customer" name="customer" required />
+<form (submit)="createOrder()" class="order-form">
+  <!-- Campo do Cliente -->
+  <mat-form-field appearance="outline" class="form-group">
+    <mat-label>Nome do Cliente</mat-label>
+    <input
+      matInput
+      type="text"
+      [(ngModel)]="customer"
+      name="customer"
+      required
+    />
+  </mat-form-field>
 
-  <button type="button" (click)="addItem()">Adicionar Item</button>
+  <!-- Botão para Adicionar Item -->
+  <button
+    type="button"
+    (click)="addItem()"
+    mat-raised-button
+    color="primary"
+    class="btn btn-add"
+  >
+    <mat-icon>add</mat-icon>
+    Adicionar Item
+  </button>
 
-  <div *ngFor="let item of items; let i = index">
-    <input type="text" [(ngModel)]="item.product" name="product{{i}}" placeholder="Produto" required />
-    <input type="number" [(ngModel)]="item.quantity" name="quantity{{i}}" placeholder="Quantidade" required />
-    <input type="number" [(ngModel)]="item.price" name="price{{i}}" placeholder="Preço" required />
+  <!-- Lista de Itens -->
+  <div *ngFor="let item of items; let i = index" class="item-group">
+    <mat-card>
+      <mat-card-content>
+        <!-- Campo do Produto -->
+        <mat-form-field appearance="outline" class="form-group">
+          <mat-label>Produto</mat-label>
+          <input
+            matInput
+            type="text"
+            [(ngModel)]="item.product"
+            name="product{{i}}"
+            placeholder="Produto"
+            required
+          />
+        </mat-form-field>
+
+        <!-- Campo da Quantidade -->
+        <mat-form-field appearance="outline" class="form-group">
+          <mat-label>Quantidade</mat-label>
+          <input
+            matInput
+            type="number"
+            [(ngModel)]="item.quantity"
+            name="quantity{{i}}"
+            placeholder="Quantidade"
+            required
+          />
+        </mat-form-field>
+
+        <!-- Campo do Preço -->
+        <mat-form-field appearance="outline" class="form-group">
+          <mat-label>Preço</mat-label>
+          <input
+            matInput
+            type="number"
+            [(ngModel)]="item.price"
+            name="price{{i}}"
+            placeholder="Preço"
+            required
+          />
+        </mat-form-field>
+      </mat-card-content>
+    </mat-card>
   </div>
 
-  <button type="submit">Criar Pedido</button>
+  <!-- Botão para Criar Pedido -->
+  <button
+    type="submit"
+    mat-raised-button
+    color="accent"
+    class="btn btn-submit"
+  >
+    <mat-icon>check_circle</mat-icon>
+    Criar Pedido
+  </button>
 </form>

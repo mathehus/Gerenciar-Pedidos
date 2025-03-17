@@ -1,0 +1,32 @@
+.order-form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.form-group {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.item-group {
+  margin-bottom: 20px;
+}
+
+mat-card {
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+mat-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-add {
+  margin-bottom: 20px;
+}
+
+.btn-submit {
+  margin-top: 20px;
+}

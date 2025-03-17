@@ -1,0 +1,29 @@
+.order-list {
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.order-item {
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.order-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+mat-card-content p {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+mat-card-content strong {
+  color: #555;
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: flex-end;
+}
