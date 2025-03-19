@@ -21,3 +21,4 @@ Este projeto é um sistema completo para gerenciamento de pedidos, composto por 
 ✅ API RESTful para CRUD de pedidos
 ✅ Autenticação com JWT 
 
+![image](https://github.com/user-attachments/assets/851547dd-2ae3-41f7-b027-eb545cf0b9d4)
