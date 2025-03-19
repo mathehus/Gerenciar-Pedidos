@@ -1,32 +1,75 @@
+.page-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #3f51b5;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.name-client{
+ width: 100%;
+}
+
+.edit-campos{
+margin: 10px;
+margin-left: 28px;
+margin-right: 10px;
+
+}
+
+/* Estilo para o formulário */
 .order-form {
-  max-width: 600px;
-  margin: 20px auto;
-  padding: 20px;
+  max-width: 800px;
+  margin:  auto;
+  padding: 24px;
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+position: center;
 }
 
-.form-group {
-  width: 100%;
-  margin-bottom: 20px;
+/* Estilo para os campos do formulário */
+.custom-field .mat-form-field-outline {
+  background-color: #f5f5f5;
+  border-radius: 4px;
+
 }
 
-.item-group {
-  margin-bottom: 20px;
+.custom-field .mat-form-field-outline-thick {
+  border-width: 2px;
+  border-color: #3f51b5;
 }
 
-mat-card {
-  padding: 20px;
+.custom-field .mat-form-field-label {
+  color: #757575;
+}
+
+.custom-field .mat-input-element {
+  color: #333333;
+}
+
+/* Estilo para o card de cada item */
+.item-card {
+  margin-bottom: 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
 }
 
-mat-card:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
+/* Estilo para os botões */
 .btn-add {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
+  width: 100%;
 }
 
 .btn-submit {
-  margin-top: 20px;
+  margin-top: 24px;
+  width: 100%;
+  background-color: #4caf50;
+  color: white;
 }
+
+

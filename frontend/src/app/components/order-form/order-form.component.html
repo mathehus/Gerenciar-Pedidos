@@ -1,7 +1,7 @@
-<h2>Novo Pedido</h2>
+<h2 class="page-title">Novo Pedido</h2>
 <form (submit)="createOrder()" class="order-form">
   <!-- Campo do Cliente -->
-  <mat-form-field appearance="outline" class="form-group">
+  <mat-form-field appearance="outline" class="form-group custom-field name-client">
     <mat-label>Nome do Cliente</mat-label>
     <input
       matInput
@@ -9,6 +9,7 @@
       [(ngModel)]="customer"
       name="customer"
       required
+      placeholder="Digite o nome do cliente"
     />
   </mat-form-field>
 
@@ -26,23 +27,23 @@
 
   <!-- Lista de Itens -->
   <div *ngFor="let item of items; let i = index" class="item-group">
-    <mat-card>
-      <mat-card-content>
+    <mat-card class="item-card">
+      <mat-card-content class="item-content">
         <!-- Campo do Produto -->
-        <mat-form-field appearance="outline" class="form-group">
+        <mat-form-field appearance="outline" class="form-group custom-field product-field edit-campos">
           <mat-label>Produto</mat-label>
           <input
             matInput
             type="text"
             [(ngModel)]="item.product"
             name="product{{i}}"
-            placeholder="Produto"
+            placeholder="Nome do produto"
             required
           />
         </mat-form-field>
 
         <!-- Campo da Quantidade -->
-        <mat-form-field appearance="outline" class="form-group">
+        <mat-form-field appearance="outline" class="form-group custom-field quantity-field edit-campos">
           <mat-label>Quantidade</mat-label>
           <input
             matInput
@@ -55,14 +56,14 @@
         </mat-form-field>
 
         <!-- Campo do Preço -->
-        <mat-form-field appearance="outline" class="form-group">
+        <mat-form-field appearance="outline" class="form-group custom-field price-field edit-campos">
           <mat-label>Preço</mat-label>
           <input
             matInput
             type="number"
             [(ngModel)]="item.price"
             name="price{{i}}"
-            placeholder="Preço"
+            placeholder="Preço unitário"
             required
           />
         </mat-form-field>
@@ -77,7 +78,16 @@
     color="accent"
     class="btn btn-submit"
   >
-    <mat-icon>check_circle</mat-icon>
+    <mat-icon>add</mat-icon>
     Criar Pedido
+  </button>
+  <button
+    type="submit"
+    mat-raised-button
+    color="accent"
+    class="btn btn-submit"
+  >
+    <mat-icon>refresh</mat-icon>
+    Atualizar Lista
   </button>
 </form>

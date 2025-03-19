@@ -21,7 +21,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatIconModule,
     MatCardModule,
     MatListModule],
-  styleUrls: ['./order-form.component.scss']
+  styleUrls: ['./order-form.component.css']
 })
 export class OrderFormComponent {
   customer = '';
