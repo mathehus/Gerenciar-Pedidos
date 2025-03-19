@@ -16,7 +16,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatListModule,
     MatButtonModule,
     MatIconModule],
-  styleUrls: ['./order-list.component.scss']
+  styleUrls: ['./order-list.component.css']
 })
 export class OrderListComponent implements OnInit {
   orders: any[] = [];

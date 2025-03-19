@@ -7,7 +7,7 @@ const cors = require('cors');
 const app = express();
 
 
-const PORT = process.env.PORT;
+const PORT =  process.env.PORT;
 const URL_MONGODB = process.env.URL_MONGODB;
 
 app.use(express.json());
@@ -15,10 +15,8 @@ app.use(cors());
 app.use(router);
 
 
-mongoose.connect(URL_MONGODB, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-}).then(() => console.log('Conectado MongoDB'))
+mongoose.connect(URL_MONGODB)
+  .then(() => console.log('Conectado ao MongoDB'))
   .catch(err => console.log(err));
 
 

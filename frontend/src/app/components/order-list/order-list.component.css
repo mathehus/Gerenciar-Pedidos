@@ -1,12 +1,19 @@
 .order-list {
   max-width: 800px;
   margin: 20px auto;
+  padding: 24px;
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .order-item {
   margin-bottom: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
+  background: white;
+  border-radius: 8px;
+  padding: 16px;
 }
 
 .order-item:hover {
@@ -26,4 +33,11 @@ mat-card-content strong {
 mat-card-actions {
   display: flex;
   justify-content: flex-end;
+}
+
+h2{
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-size: 50px;
+  font-family: 'Times New Roman', Times, serif;
 }

@@ -25,20 +25,25 @@ import { ReactiveFormsModule } from '@angular/forms';
 })
 export class OrderFormComponent {
   customer = '';
-  items = [{ product: '', quantity: 1, price: 0 }];
+  items = [{ product: '', quantity: 0, price: 0 }];
 
   constructor(private orderService: OrderService) { }
 
   addItem() {
-    this.items.push({ product: '', quantity: 1, price: 0 });
+    this.items.push({ product: '', quantity: 0, price: 0 });
   }
+
+  removerItem() {
+    this.items.pop();
+  }
+
 
   createOrder() {
     const order = { customer: this.customer, items: this.items };
     this.orderService.createOrder(order).subscribe(() => {
       alert('Pedido criado!');
       this.customer = '';
-      this.items = [{ product: '', quantity: 1, price: 0 }];
+      this.items = [{ product: '', quantity: 0, price: 0 }];
     });
   }
 }
